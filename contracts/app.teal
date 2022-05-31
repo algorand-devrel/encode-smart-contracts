@@ -1,0 +1,106 @@
+#pragma version 6
+txn ApplicationID
+int 0
+==
+bnz main_l16
+txn OnCompletion
+int OptIn
+==
+bnz main_l15
+txn OnCompletion
+int CloseOut
+==
+bnz main_l14
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l13
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l12
+txn OnCompletion
+int NoOp
+==
+bnz main_l7
+err
+main_l7:
+txna ApplicationArgs 0
+method "add(uint64)uint64"
+==
+bnz main_l11
+txna ApplicationArgs 0
+method "sub(uint64)uint64"
+==
+bnz main_l10
+err
+main_l10:
+txna ApplicationArgs 1
+btoi
+callsub deduct_1
+return
+main_l11:
+txna ApplicationArgs 1
+btoi
+callsub add_0
+return
+main_l12:
+int 1
+return
+main_l13:
+int 1
+return
+main_l14:
+int 1
+return
+main_l15:
+int 0
+return
+main_l16:
+byte "Count"
+int 0
+app_global_put
+int 1
+return
+
+// add
+add_0:
+store 0
+byte "Count"
+byte "Count"
+app_global_get
+load 0
++
+app_global_put
+byte 0x151f7c75
+byte "Count"
+app_global_get
+itob
+concat
+log
+int 1
+return
+
+// deduct
+deduct_1:
+store 1
+byte "Count"
+app_global_get
+load 1
+>=
+bz deduct_1_l2
+byte "Count"
+byte "Count"
+app_global_get
+load 1
+-
+app_global_put
+deduct_1_l2:
+byte 0x151f7c75
+byte "Count"
+app_global_get
+itob
+concat
+log
+int 1
+return

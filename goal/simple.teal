@@ -1,0 +1,34 @@
+#pragma version 6
+txn ApplicationID
+bz handle_createapp
+
+// ABI code to check the method name
+method "add(uint64,uint64)uint64"
+txna ApplicationArgs 0
+==
+assert
+// end of ABI check
+
+// Read the two args and convert to ints 
+// and add them
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+btoi
++
+store 0 //store result in scratch
+
+// Handle ABI Return Type
+byte 0x151f7c75 //# Literally hash('return')[:4]
+load 0 //containing return integer from scratch
+itob //convert to byte[]
+concat //concat the two
+log //log out the return byte[]
+
+// Return a postive value
+int 1
+return
+
+handle_createapp:
+int 1
+return

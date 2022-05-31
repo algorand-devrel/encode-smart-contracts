@@ -1,0 +1,73 @@
+{
+  "accounts": [
+    {
+      "address": "G76RIKQIUOSNMVJ4PXTZXKYF2QHTKEMZEDEDGKVDI2BPQB46MAU4E43HOM",
+      "amount": 4000000000000000,
+      "amount-without-pending-rewards": 4000000000000000,
+      "min-balance": 100000,
+      "participation": {
+        "selection-participation-key": "apMj880bf54lYbqn+as+k9VhQJAnPFJfaZDUXW4Z5R0=",
+        "state-proof-key": "hD3z5RfGsE1cdEiX5c4OupqWnNUdagW9NOUmWpY0/IUG5TJXTtuTEmS1pzMXBNX/PO9JgcRTc7sKEe2bswwZEg==",
+        "vote-first-valid": 0,
+        "vote-key-dilution": 10000,
+        "vote-last-valid": 30000,
+        "vote-participation-key": "MiRiCubsNF+9Ia7/LTVsAhqIsB4aW+cJjLxgGWYzicU="
+      },
+      "pending-rewards": 0,
+      "rewards": 0,
+      "round": 5,
+      "status": "Online",
+      "total-apps-opted-in": 0,
+      "total-assets-opted-in": 0,
+      "total-created-apps": 0,
+      "total-created-assets": 0
+    },
+    {
+      "address": "R3PVWDQQRQ5BUCSLOBGMRFMR6KWY2UG7ETUZCVT6MQHNOIFJJPRMBISWCA",
+      "amount": 0,
+      "amount-without-pending-rewards": 0,
+      "min-balance": 100000,
+      "pending-rewards": 0,
+      "rewards": 0,
+      "round": 5,
+      "status": "Offline",
+      "total-apps-opted-in": 0,
+      "total-assets-opted-in": 0,
+      "total-created-apps": 0,
+      "total-created-assets": 0
+    }
+  ],
+  "apps": [
+    {
+      "id": 6,
+      "params": {
+        "approval-program": "BiABATEYQQAjgAT+a99pNhoAEkQ2GgEXNhoCFwg1AIAEFR98dTQAFlCwIkMiQw==",
+        "clear-state-program": "BoEBQw==",
+        "creator": "DYMPZO44H2G5P2IN3WCLWPYCVKCIEOGLE6HYMGUCMNBET4LAFUR4AZACPY"
+      }
+    }
+  ],
+  "latest-timestamp": 1653922765,
+  "protocol-version": "future",
+  "round": 5,
+  "sources": null,
+  "txns": [
+    {
+  "txn": {
+    "apaa": [
+      "/mvfaQ==",
+      "AAAAAAAAAAE=",
+      "AAAAAAAAAAE="
+    ],
+    "apid": 6,
+    "fee": 1000,
+    "fv": 6,
+    "gh": "TrECKRkszjzco91pWTcXi30pMkeW8xYmY4dsYuPFFO8=",
+    "lv": 1006,
+    "note": "pz+uCcXV2NU=",
+    "snd": "G76RIKQIUOSNMVJ4PXTZXKYF2QHTKEMZEDEDGKVDI2BPQB46MAU4E43HOM",
+    "type": "appl"
+  }
+}
+  ]
+}
